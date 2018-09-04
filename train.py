@@ -104,7 +104,7 @@ if __name__ == "__main__":
                 print('val acc：%.3f%%' % (100 * float(correct) / float(total)))
 
             # calculate test error
-            if False:
+            if True:
                 correct = 0
                 total = 0
                 for data in test_loader:
