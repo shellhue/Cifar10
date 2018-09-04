@@ -7,14 +7,14 @@ from resnet import ResNet20
 
 
 # super parameters
-EPOCH = 100
+EPOCH = 164
 BATCH_SIZE = 128
 LR = 0.1
 
 
 # use GPU
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-
+print("training device is: ")
 
 # data preparing
 # data augmentation
@@ -44,7 +44,7 @@ resnet20 = ResNet20().to(device)
 
 criterion = nn.CrossEntropyLoss()  # use cross entropy loss
 # sgd optimizer with momentum and L2 regulation
-optimizer = optim.SGD(resnet20.parameters(), lr=LR, momentum=0.9, weight_decay=5e-4)
+optimizer = optim.SGD(resnet20.parameters(), lr=LR, momentum=0.9, weight_decay=1e-4)
 
 
 # train
@@ -58,10 +58,13 @@ if __name__ == "__main__":
         total = 0.0
         for i, data in enumerate(training_loader, 0):
             length = len(training_loader)
+            iteration = i + 1 + epoch * length
+            if iteration == 32000 or iteration == 48000:
+                LR = LR / 10
+                optimizer = optim.SGD(resnet20.parameters(), lr=LR, momentum=0.9, weight_decay=1e-4)
             inputs, labels = data
             inputs, labels = inputs.to(device), labels.to(device)
             optimizer.zero_grad()
-
             # forward -> backward -> update gradients
             outputs = resnet20(inputs)
             loss = criterion(outputs, labels)
@@ -73,8 +76,8 @@ if __name__ == "__main__":
             _, predicted = torch.max(outputs.data, 1)
             total += labels.size(0)
             correct += predicted.eq(labels.data).cpu().sum()
-            print('[epoch:%d, iter:%d] Loss: %.03f | Acc: %.3f%% '
-                  % (epoch + 1, (i + 1 + epoch * length), sum_loss / (i + 1), 100. * correct / total))
+            print('[epoch:%d, iter:%d] Loss: %.03f | LearingRate: %.6f | Acc: %.3f%% '
+                  % (epoch + 1, iteration, sum_loss / (i + 1), LR, 100. * correct / total))
 
         # 每训练完一个epoch测试一下准确率
         print("Waiting Test!")
@@ -94,5 +97,5 @@ if __name__ == "__main__":
             acc = 100. * correct / total
             # 将每次测试结果实时写入acc.txt文件中
             print('Saving model......')
-            torch.save(resnet20.state_dict(), '%s/net_%03d.pth' % ("./log", epoch + 1))
+            torch.save(resnet20.state_dict(), '%s/resnet20_%03d.pth' % ("./log", epoch + 1))
     print("Training Finished, TotalEPOCH=%d" % EPOCH)
