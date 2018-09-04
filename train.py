@@ -63,7 +63,7 @@ if __name__ == "__main__":
         correct = 0.0
         total = 0.0
         for i, data in enumerate(training_loader, 0):
-            length = train_size
+            length = len(training_loader)
             iteration = i + 1 + epoch * length
             if iteration == 32000 or iteration == 48000:
                 LR = LR / 10
