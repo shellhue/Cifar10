@@ -30,8 +30,14 @@ transform_test = transforms.Compose([
     transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
 ])
 
-training_set = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform_train)
+full_dataset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform_train)
+
+train_size = int(0.8 * len(full_dataset))
+test_size = len(full_dataset) - train_size
+training_set, validation_set = torch.utils.data.random_split(full_dataset, [train_size, test_size])
+
 training_loader = torch.utils.data.DataLoader(training_set, batch_size=BATCH_SIZE, shuffle=True, num_workers=2)
+val_loader = torch.utils.data.DataLoader(validation_set, batch_size=BATCH_SIZE, shuffle=False, num_workers=2)
 
 test_set = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform_test)
 test_loader = torch.utils.data.DataLoader(test_set, batch_size=100, shuffle=False, num_workers=2)
@@ -57,7 +63,7 @@ if __name__ == "__main__":
         correct = 0.0
         total = 0.0
         for i, data in enumerate(training_loader, 0):
-            length = len(training_loader)
+            length = train_size
             iteration = i + 1 + epoch * length
             if iteration == 32000 or iteration == 48000:
                 LR = LR / 10
@@ -82,20 +88,35 @@ if __name__ == "__main__":
         # 每训练完一个epoch测试一下准确率
         print("Waiting Test!")
         with torch.no_grad():
-            correct = 0
-            total = 0
-            for data in test_loader:
-                resnet20.eval()
-                images, labels = data
-                images, labels = images.to(device), labels.to(device)
-                outputs = resnet20(images)
-                # 取得分最高的那个类 (outputs.data的索引号)
-                _, predicted = torch.max(outputs.data, 1)
-                total += labels.size(0)
-                correct += (predicted == labels).sum()
-            print('测试分类准确率为：%.3f%%' % (100 * correct / total))
-            acc = 100. * correct / total
-            # 将每次测试结果实时写入acc.txt文件中
-            print('Saving model......')
-            torch.save(resnet20.state_dict(), '%s/resnet20_%03d.pth' % ("./log", epoch + 1))
+            # calculate validation accuraccy
+            if True:
+                correct = 0
+                total = 0
+                for data in val_loader:
+                    resnet20.eval()
+                    images, labels = data
+                    images, labels = images.to(device), labels.to(device)
+                    outputs = resnet20(images)
+                    # 取得分最高的那个类 (outputs.data的索引号)
+                    _, predicted = torch.max(outputs.data, 1)
+                    total += labels.size(0)
+                    correct += (predicted == labels).sum()
+                print('val acc：%.3f%%' % (100 * correct / total))
+
+            # calculate test error
+            if True:
+                correct = 0
+                total = 0
+                for data in test_loader:
+                    resnet20.eval()
+                    images, labels = data
+                    images, labels = images.to(device), labels.to(device)
+                    outputs = resnet20(images)
+                    # 取得分最高的那个类 (outputs.data的索引号)
+                    _, predicted = torch.max(outputs.data, 1)
+                    total += labels.size(0)
+                    correct += (predicted == labels).sum()
+                print('test acc：%.3f%%' % (100 * correct / total))
+                print('Saving model......')
+                torch.save(resnet20.state_dict(), '%s/resnet20_%03d.pth' % ("./log", epoch + 1))
     print("Training Finished, TotalEPOCH=%d" % EPOCH)
