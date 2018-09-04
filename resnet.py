@@ -41,7 +41,7 @@ class ResNet(nn.Module):
         self.layer1 = self.make_layer(16, 16,  num_blocks)
         self.layer2 = self.make_layer(16, 32, num_blocks)
         self.layer3 = self.make_layer(32, 64, num_blocks)
-        self.fc = nn.Linear(512, 10)
+        self.fc = nn.Linear(64, 10)
 
     def make_layer(self, in_channels, out_channels, num_blocks):
         layers = []

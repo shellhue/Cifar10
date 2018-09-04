@@ -142,4 +142,7 @@ venv.bak/
 .idea
 .idea/
 .idea/*
+
+data/*
+data/
 # End of https://www.gitignore.io/api/macos,python

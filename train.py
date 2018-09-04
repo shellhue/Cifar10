@@ -13,7 +13,7 @@ LR = 0.1
 
 
 # use GPU
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
 # data preparing
