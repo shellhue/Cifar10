@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
-from resnet import ResNet20
+from resnet import ResNet56
 
 
 # super parameters
@@ -46,7 +46,7 @@ classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship'
 
 
 # create resnet model
-resnet20 = ResNet20().to(device)
+resnet20 = ResNet56().to(device)
 
 criterion = nn.CrossEntropyLoss()  # use cross entropy loss
 # sgd optimizer with momentum and L2 regulation
