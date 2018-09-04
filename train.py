@@ -118,5 +118,5 @@ if __name__ == "__main__":
                     correct += (predicted == labels).sum()
                 print('test acc：%.3f%%' % (100 * correct / total))
                 print('Saving model......')
-                torch.save(resnet20.state_dict(), '%s/resnet20_%03d.pth' % ("./log", epoch + 1))
+                torch.save(resnet20.state_dict(), '%s/resnet56_%03d.pth' % ("./log", epoch + 1))
     print("Training Finished, TotalEPOCH=%d" % EPOCH)
