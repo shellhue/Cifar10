@@ -145,4 +145,6 @@ venv.bak/
 
 data/*
 data/
+
+**.pth
 # End of https://www.gitignore.io/api/macos,python

@@ -53,8 +53,7 @@ criterion = nn.CrossEntropyLoss()  # use cross entropy loss
 optimizer = optim.SGD(resnet20.parameters(), lr=LR, momentum=0.9, weight_decay=1e-4)
 
 
-# train
-if __name__ == "__main__":
+def _main():
     print("Start Training!")
     for epoch in range(0, EPOCH):
         print('\nEpoch: %d' % (epoch + 1))
@@ -120,3 +119,8 @@ if __name__ == "__main__":
                 print('Saving model......')
                 torch.save(resnet20.state_dict(), '%s/resnet56_%03d.pth' % ("./log", epoch + 1))
     print("Training Finished, TotalEPOCH=%d" % EPOCH)
+
+
+# train
+if __name__ == "__main__":
+    _main()
