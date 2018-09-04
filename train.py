@@ -32,7 +32,7 @@ transform_test = transforms.Compose([
 
 full_dataset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform_train)
 
-train_size = int(0.8 * len(full_dataset))
+train_size = int(1 * len(full_dataset))
 test_size = len(full_dataset) - train_size
 training_set, validation_set = torch.utils.data.random_split(full_dataset, [train_size, test_size])
 
@@ -83,13 +83,13 @@ if __name__ == "__main__":
             total += labels.size(0)
             correct += predicted.eq(labels.data).cpu().sum()
             print('[epoch:%d, iter:%d] Loss: %.03f | LearingRate: %.6f | Acc: %.3f%% '
-                  % (epoch + 1, iteration, sum_loss / (i + 1), LR, 100. * correct / total))
+                  % (epoch + 1, iteration, sum_loss / (i + 1), LR, 100. * float(correct) / float(total)))
 
         # 每训练完一个epoch测试一下准确率
         print("Waiting Test!")
         with torch.no_grad():
-            # calculate validation accuraccy
-            if True:
+            # calculate validation accuraccy, no needs to do so, as there is no super parameter to choose
+            if False:
                 correct = 0
                 total = 0
                 for data in val_loader:
@@ -101,10 +101,10 @@ if __name__ == "__main__":
                     _, predicted = torch.max(outputs.data, 1)
                     total += labels.size(0)
                     correct += (predicted == labels).sum()
-                print('val acc：%.3f%%' % (100 * correct / total))
+                print('val acc：%.3f%%' % (100 * float(correct) / float(total)))
 
             # calculate test error
-            if True:
+            if False:
                 correct = 0
                 total = 0
                 for data in test_loader:
@@ -116,7 +116,7 @@ if __name__ == "__main__":
                     _, predicted = torch.max(outputs.data, 1)
                     total += labels.size(0)
                     correct += (predicted == labels).sum()
-                print('test acc：%.3f%%' % (100 * correct / total))
+                print('test acc：%.3f%%' % (100 * float(correct) / float(total)))
                 print('Saving model......')
                 torch.save(resnet20.state_dict(), '%s/resnet56_%03d.pth' % ("./log", epoch + 1))
     print("Training Finished, TotalEPOCH=%d" % EPOCH)
