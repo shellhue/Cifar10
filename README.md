@@ -1,4 +1,4 @@
-This is a interview project for AI engineer of a **Company**.
+This is a interview project for AI engineer of a **SECRET COMPANY**.
 
 ## Targets
 - [x] reproduce the results of resnet on Cifar10 with pytorch.
