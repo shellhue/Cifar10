@@ -30,7 +30,7 @@ x = torch.randn(1, 3, 32, 32)
 outputs = model(x)
 print("finish loading pretrained weights")
 
-onnx_proto_file = "reset20.onnx"
+onnx_proto_file = "resnet{}.onnx".format(LAYERS)
 torch_out = torch.onnx.export(model, x, onnx_proto_file, export_params=True)
 print(torch_out)
 
