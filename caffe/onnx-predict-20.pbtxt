@@ -1,0 +1,1703 @@
+name: "torch-jit-export"
+op {
+  input: "0"
+  input: "1"
+  output: "129"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+}
+op {
+  input: "129"
+  input: "2"
+  input: "3"
+  input: "4"
+  input: "5"
+  output: "130"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "130"
+  output: "131"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "131"
+  input: "7"
+  output: "132"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+}
+op {
+  input: "132"
+  input: "8"
+  input: "9"
+  input: "10"
+  input: "11"
+  output: "133"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "133"
+  output: "134"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "134"
+  input: "13"
+  output: "135"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+}
+op {
+  input: "135"
+  input: "14"
+  input: "15"
+  input: "16"
+  input: "17"
+  output: "136"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "136"
+  input: "131"
+  output: "137"
+  name: ""
+  type: "Add"
+}
+op {
+  input: "137"
+  output: "138"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "138"
+  input: "19"
+  output: "139"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+}
+op {
+  input: "139"
+  input: "20"
+  input: "21"
+  input: "22"
+  input: "23"
+  output: "140"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "140"
+  output: "141"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "141"
+  input: "25"
+  output: "142"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+}
+op {
+  input: "142"
+  input: "26"
+  input: "27"
+  input: "28"
+  input: "29"
+  output: "143"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "143"
+  input: "138"
+  output: "144"
+  name: ""
+  type: "Add"
+}
+op {
+  input: "144"
+  output: "145"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "145"
+  input: "31"
+  output: "146"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+}
+op {
+  input: "146"
+  input: "32"
+  input: "33"
+  input: "34"
+  input: "35"
+  output: "147"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "147"
+  output: "148"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "148"
+  input: "37"
+  output: "149"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+}
+op {
+  input: "149"
+  input: "38"
+  input: "39"
+  input: "40"
+  input: "41"
+  output: "150"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "150"
+  input: "145"
+  output: "151"
+  name: ""
+  type: "Add"
+}
+op {
+  input: "151"
+  output: "152"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "152"
+  input: "43"
+  output: "153"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 2
+    ints: 2
+  }
+}
+op {
+  input: "153"
+  input: "44"
+  input: "45"
+  input: "46"
+  input: "47"
+  output: "154"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "154"
+  output: "155"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "155"
+  input: "49"
+  output: "156"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+}
+op {
+  input: "156"
+  input: "50"
+  input: "51"
+  input: "52"
+  input: "53"
+  output: "157"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "152"
+  input: "55"
+  output: "158"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "strides"
+    ints: 2
+    ints: 2
+  }
+}
+op {
+  input: "158"
+  input: "56"
+  input: "57"
+  input: "58"
+  input: "59"
+  output: "159"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "157"
+  input: "159"
+  output: "160"
+  name: ""
+  type: "Add"
+}
+op {
+  input: "160"
+  output: "161"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "161"
+  input: "61"
+  output: "162"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+}
+op {
+  input: "162"
+  input: "62"
+  input: "63"
+  input: "64"
+  input: "65"
+  output: "163"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "163"
+  output: "164"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "164"
+  input: "67"
+  output: "165"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+}
+op {
+  input: "165"
+  input: "68"
+  input: "69"
+  input: "70"
+  input: "71"
+  output: "166"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "166"
+  input: "161"
+  output: "167"
+  name: ""
+  type: "Add"
+}
+op {
+  input: "167"
+  output: "168"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "168"
+  input: "73"
+  output: "169"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+}
+op {
+  input: "169"
+  input: "74"
+  input: "75"
+  input: "76"
+  input: "77"
+  output: "170"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "170"
+  output: "171"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "171"
+  input: "79"
+  output: "172"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+}
+op {
+  input: "172"
+  input: "80"
+  input: "81"
+  input: "82"
+  input: "83"
+  output: "173"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "173"
+  input: "168"
+  output: "174"
+  name: ""
+  type: "Add"
+}
+op {
+  input: "174"
+  output: "175"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "175"
+  input: "85"
+  output: "176"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 2
+    ints: 2
+  }
+}
+op {
+  input: "176"
+  input: "86"
+  input: "87"
+  input: "88"
+  input: "89"
+  output: "177"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "177"
+  output: "178"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "178"
+  input: "91"
+  output: "179"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+}
+op {
+  input: "179"
+  input: "92"
+  input: "93"
+  input: "94"
+  input: "95"
+  output: "180"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "175"
+  input: "97"
+  output: "181"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "strides"
+    ints: 2
+    ints: 2
+  }
+}
+op {
+  input: "181"
+  input: "98"
+  input: "99"
+  input: "100"
+  input: "101"
+  output: "182"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "180"
+  input: "182"
+  output: "183"
+  name: ""
+  type: "Add"
+}
+op {
+  input: "183"
+  output: "184"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "184"
+  input: "103"
+  output: "185"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+}
+op {
+  input: "185"
+  input: "104"
+  input: "105"
+  input: "106"
+  input: "107"
+  output: "186"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "186"
+  output: "187"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "187"
+  input: "109"
+  output: "188"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+}
+op {
+  input: "188"
+  input: "110"
+  input: "111"
+  input: "112"
+  input: "113"
+  output: "189"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "189"
+  input: "184"
+  output: "190"
+  name: ""
+  type: "Add"
+}
+op {
+  input: "190"
+  output: "191"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "191"
+  input: "115"
+  output: "192"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+}
+op {
+  input: "192"
+  input: "116"
+  input: "117"
+  input: "118"
+  input: "119"
+  output: "193"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "193"
+  output: "194"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "194"
+  input: "121"
+  output: "195"
+  name: ""
+  type: "Conv"
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+}
+op {
+  input: "195"
+  input: "122"
+  input: "123"
+  input: "124"
+  input: "125"
+  output: "196"
+  name: ""
+  type: "SpatialBN"
+  arg {
+    name: "epsilon"
+    f: 9.999999747378752e-06
+  }
+  arg {
+    name: "is_test"
+    i: 1
+  }
+  arg {
+    name: "momentum"
+    f: 1.0
+  }
+}
+op {
+  input: "196"
+  input: "191"
+  output: "197"
+  name: ""
+  type: "Add"
+}
+op {
+  input: "197"
+  output: "198"
+  name: ""
+  type: "Relu"
+}
+op {
+  input: "198"
+  output: "199"
+  name: ""
+  type: "PadImage"
+  arg {
+    name: "mode"
+    s: "constant"
+  }
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "value"
+    f: 0.0
+  }
+}
+op {
+  input: "199"
+  output: "200"
+  name: ""
+  type: "AveragePool"
+  arg {
+    name: "kernels"
+    ints: 8
+    ints: 8
+  }
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "strides"
+    ints: 8
+    ints: 8
+  }
+}
+op {
+  input: "200"
+  output: "201"
+  name: ""
+  type: "Shape"
+}
+op {
+  input: "201"
+  output: "OC2_DUMMY_0"
+  name: ""
+  type: "Shape"
+}
+op {
+  output: "OC2_DUMMY_1"
+  name: ""
+  type: "GivenTensorIntFill"
+  arg {
+    name: "shape"
+    ints: 1
+  }
+  arg {
+    name: "values"
+    ints: 0
+  }
+}
+op {
+  output: "OC2_DUMMY_2"
+  name: ""
+  type: "GivenTensorInt64Fill"
+  arg {
+    name: "shape"
+    ints: 1
+  }
+  arg {
+    name: "values"
+    ints: 0
+  }
+}
+op {
+  input: "OC2_DUMMY_0"
+  output: "OC2_DUMMY_3"
+  name: ""
+  type: "ConstantFill"
+  arg {
+    name: "dtype"
+    i: 10
+  }
+  arg {
+    name: "value"
+    i: 0
+  }
+}
+op {
+  input: "OC2_DUMMY_3"
+  input: "OC2_DUMMY_1"
+  input: "OC2_DUMMY_2"
+  output: "OC2_DUMMY_3"
+  name: ""
+  type: "ScatterAssign"
+}
+op {
+  input: "OC2_DUMMY_3"
+  output: "OC2_DUMMY_4"
+  name: ""
+  type: "Cast"
+  arg {
+    name: "to"
+    i: 2
+  }
+}
+op {
+  output: "OC2_DUMMY_5"
+  name: ""
+  type: "GivenTensorInt64Fill"
+  arg {
+    name: "shape"
+    ints: 1
+  }
+  arg {
+    name: "values"
+    ints: 1
+  }
+}
+op {
+  input: "OC2_DUMMY_0"
+  output: "OC2_DUMMY_6"
+  name: ""
+  type: "ConstantFill"
+  arg {
+    name: "dtype"
+    i: 10
+  }
+  arg {
+    name: "value"
+    i: -1
+  }
+}
+op {
+  input: "OC2_DUMMY_6"
+  input: "OC2_DUMMY_1"
+  input: "OC2_DUMMY_5"
+  output: "OC2_DUMMY_6"
+  name: ""
+  type: "ScatterAssign"
+}
+op {
+  input: "OC2_DUMMY_6"
+  output: "OC2_DUMMY_7"
+  name: ""
+  type: "Cast"
+  arg {
+    name: "to"
+    i: 2
+  }
+}
+op {
+  input: "201"
+  input: "OC2_DUMMY_4"
+  input: "OC2_DUMMY_7"
+  output: "202"
+  name: ""
+  type: "Slice"
+}
+op {
+  input: "202"
+  output: "203"
+  name: ""
+  type: "Squeeze"
+  arg {
+    name: "dims"
+    ints: 0
+  }
+}
+op {
+  output: "204"
+  type: "GivenTensorInt64Fill"
+  arg {
+    name: "values"
+    ints: -1
+  }
+  arg {
+    name: "shape"
+  }
+}
+op {
+  input: "203"
+  output: "205"
+  name: ""
+  type: "ExpandDims"
+  arg {
+    name: "axes"
+    ints: 0
+  }
+}
+op {
+  input: "204"
+  output: "206"
+  name: ""
+  type: "ExpandDims"
+  arg {
+    name: "axes"
+    ints: 0
+  }
+}
+op {
+  input: "205"
+  input: "206"
+  output: "207"
+  output: "OC2_DUMMY_8"
+  name: ""
+  type: "Concat"
+  arg {
+    name: "axis"
+    i: 0
+  }
+}
+op {
+  input: "200"
+  input: "207"
+  output: "208"
+  output: "OC2_DUMMY_9"
+  name: ""
+  type: "Reshape"
+}
+op {
+  input: "208"
+  input: "127"
+  input: "128"
+  output: "209"
+  name: ""
+  type: "FC"
+}
+device_option {
+  device_type: 0
+  cuda_gpu_id: 0
+}
+external_input: "0"
+external_input: "1"
+external_input: "2"
+external_input: "3"
+external_input: "4"
+external_input: "5"
+external_input: "6"
+external_input: "7"
+external_input: "8"
+external_input: "9"
+external_input: "10"
+external_input: "11"
+external_input: "12"
+external_input: "13"
+external_input: "14"
+external_input: "15"
+external_input: "16"
+external_input: "17"
+external_input: "18"
+external_input: "19"
+external_input: "20"
+external_input: "21"
+external_input: "22"
+external_input: "23"
+external_input: "24"
+external_input: "25"
+external_input: "26"
+external_input: "27"
+external_input: "28"
+external_input: "29"
+external_input: "30"
+external_input: "31"
+external_input: "32"
+external_input: "33"
+external_input: "34"
+external_input: "35"
+external_input: "36"
+external_input: "37"
+external_input: "38"
+external_input: "39"
+external_input: "40"
+external_input: "41"
+external_input: "42"
+external_input: "43"
+external_input: "44"
+external_input: "45"
+external_input: "46"
+external_input: "47"
+external_input: "48"
+external_input: "49"
+external_input: "50"
+external_input: "51"
+external_input: "52"
+external_input: "53"
+external_input: "54"
+external_input: "55"
+external_input: "56"
+external_input: "57"
+external_input: "58"
+external_input: "59"
+external_input: "60"
+external_input: "61"
+external_input: "62"
+external_input: "63"
+external_input: "64"
+external_input: "65"
+external_input: "66"
+external_input: "67"
+external_input: "68"
+external_input: "69"
+external_input: "70"
+external_input: "71"
+external_input: "72"
+external_input: "73"
+external_input: "74"
+external_input: "75"
+external_input: "76"
+external_input: "77"
+external_input: "78"
+external_input: "79"
+external_input: "80"
+external_input: "81"
+external_input: "82"
+external_input: "83"
+external_input: "84"
+external_input: "85"
+external_input: "86"
+external_input: "87"
+external_input: "88"
+external_input: "89"
+external_input: "90"
+external_input: "91"
+external_input: "92"
+external_input: "93"
+external_input: "94"
+external_input: "95"
+external_input: "96"
+external_input: "97"
+external_input: "98"
+external_input: "99"
+external_input: "100"
+external_input: "101"
+external_input: "102"
+external_input: "103"
+external_input: "104"
+external_input: "105"
+external_input: "106"
+external_input: "107"
+external_input: "108"
+external_input: "109"
+external_input: "110"
+external_input: "111"
+external_input: "112"
+external_input: "113"
+external_input: "114"
+external_input: "115"
+external_input: "116"
+external_input: "117"
+external_input: "118"
+external_input: "119"
+external_input: "120"
+external_input: "121"
+external_input: "122"
+external_input: "123"
+external_input: "124"
+external_input: "125"
+external_input: "126"
+external_input: "127"
+external_input: "128"
+external_output: "209"
