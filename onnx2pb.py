@@ -1,5 +1,4 @@
 import argparse
-import resnet
 import onnx
 from onnx_caffe2.backend import Caffe2Backend
 
