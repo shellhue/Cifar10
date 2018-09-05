@@ -46,4 +46,4 @@ python onnx2pb.py --layers=20 --onnx_proto_file='pathToOnnxProtoFile' // onnx-in
 
 ## Predict with c++
 I haven’t finished this. But i know how to do it.
-Just follow [caffe2_cpp_tutorial](https://github.com/leonardvandriel/caffe2_cpp_tutorial), and then change the `pretrained.cc` in dir `/src/caffe2/binaries/` to use the `onnx-init-20.pb onnx-predict-20.pb`  files. But unfortunately, it is hard to make `caffe2_cpp_tutorial`run. I find that i have to install `caffe` by building the source which is very slow.
+Just follow [caffe2_cpp_tutorial](https://github.com/leonardvandriel/caffe2_cpp_tutorial), and then change the `pretrained.cc` in dir `/src/caffe2/binaries/` to use the `onnx-init-20.pb onnx-predict-20.pb`  files. Unfortunately, it is hard to make `caffe2_cpp_tutorial`run. I find that installing `caffe` by building the source is needed, but the installation is very slow. And i have no time!!
