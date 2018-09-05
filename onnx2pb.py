@@ -19,12 +19,12 @@ onnx_model = onnx.load(ONNX_PROTO_FILE)
 # tensor([[-0.5216, -0.0826,  0.3003,  0.2617,  0.2749,  0.3003,  0.3669,  0.3221,
 #          -0.3779, -0.1984]], grad_fn=<ThAddmmBackward>)
 init_net, predict_net = Caffe2Backend.onnx_graph_to_caffe2_net(onnx_model.graph)
-with open("onnx-init-{}.pb".format(LAYERS), "wb") as f:
+with open("onnx-init-20.pb", "wb") as f:
     f.write(init_net.SerializeToString())
-with open("onnx-init-{}.pbtxt".format(LAYERS), "w") as f:
+with open("onnx-init-20.pbtxt".format(LAYERS), "w") as f:
     f.write(str(init_net))
-with open("onnx-predict-{}.pb".format(LAYERS), "wb") as f:
+with open("onnx-predict-20.pb".format(LAYERS), "wb") as f:
     f.write(predict_net.SerializeToString())
-with open("onnx-predict-{}.pbtxt".format(LAYERS), "w") as f:
+with open("onnx-predict-20.pbtxt".format(LAYERS), "w") as f:
     f.write(str(predict_net))
 
