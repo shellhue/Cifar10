@@ -11,7 +11,7 @@ Reproducing is easy, just implement the resnet and train it with suggested super
 
 To evaluate the accuracy on test dataset for resnet20, just run:
 ```
-git https://github.com/shellhue/Cifar10.git && cd Cifar10
+git clone https://github.com/shellhue/Cifar10.git && cd Cifar10
 python evaluate.py --layers=20 --weights='./weights/resnet20_164.pth'
 ```
 
@@ -22,7 +22,7 @@ The corresponding error is:
 
 To evaluate the accuracy on test dataset for resnet56, just run:
 ```
-git https://github.com/shellhue/Cifar10.git && cd Cifar10
+git clone https://github.com/shellhue/Cifar10.git && cd Cifar10
 python evaluate.py --layers=56 --weights='./weights/resnet56_164.pth'
 ```
 
