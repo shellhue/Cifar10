@@ -31,7 +31,7 @@ outputs = model(x)
 print("finish loading pretrained weights")
 
 onnx_proto_file = "reset20.onnx"
-torch_out = torch.onnx._export(model, x, onnx_proto_file, export_params=True)
+torch_out = torch.onnx.export(model, x, onnx_proto_file, export_params=True)
 print(torch_out)
 
 # onnx_model = onnx.load(onnx_proto_file)
