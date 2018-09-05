@@ -3,6 +3,8 @@ import onnx
 from onnx_caffe2.backend import Caffe2Backend
 
 print(Caffe2Backend._renamed_operators)
+Caffe2Backend._renamed_operators['Unsqueeze'] = 'ExpandDims'
+
 # argument parser
 parser = argparse.ArgumentParser(description='PyTorch CIFAR10 Model Converting to proto buffer')
 parser.add_argument('--onnx_proto_file', help='onnx proto file path')
