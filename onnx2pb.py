@@ -16,6 +16,10 @@ LAYERS = int(args.layers)
 
 
 onnx_model = onnx.load(ONNX_PROTO_FILE)
+onnx.checker.check_model(onnx_model)
+
+# Print a human readable representation of the graph
+onnx.helper.printable_graph(onnx_model.graph)
 # tensor([[-0.5216, -0.0826,  0.3003,  0.2617,  0.2749,  0.3003,  0.3669,  0.3221,
 #          -0.3779, -0.1984]], grad_fn=<ThAddmmBackward>)
 init_net, predict_net = Caffe2Backend.onnx_graph_to_caffe2_net(onnx_model.graph)
